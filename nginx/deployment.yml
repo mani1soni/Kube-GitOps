@@ -15,5 +15,5 @@ spec:
         app: nginx
     spec:
       containers:
-        - image: docker.io/manisomanish/gitops:34
+        - image: docker.io/manisomanish/gitops:35
           name: nginx
