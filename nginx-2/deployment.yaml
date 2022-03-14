@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx
+  name: nginx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - image: docker.io/manisomanish/gitops:40
+          name: nginx
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "1k"
+            limits:
+              memory: "1Gi"
+              cpu: "1k"
+  
