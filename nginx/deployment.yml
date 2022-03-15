@@ -17,4 +17,11 @@ spec:
       containers:
         - image: docker.io/manisomanish/gitops:40
           name: nginx
+          resources:
+            requests:
+              memory: "30Gi"
+                cpu: "8k"
+              limits:
+                memory: "30Gi"
+                  cpu: "8k"
   
