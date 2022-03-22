@@ -5,7 +5,7 @@ metadata:
     app: nginx
   name: nginx-deployment
 spec:
-  replicas: 5
+  replicas: 30
   selector:
     matchLabels:
       app: nginx
@@ -17,11 +17,11 @@ spec:
       containers:
         - image: docker.io/manisomanish/gitops:40
           name: nginx
-#           resources:
-#             requests:
-#               memory: "20Gi"
-#               cpu: "2k"
-#             limits:
-#               memory: "20Gi"
-#               cpu: "2k"
+          resources:
+            requests:
+              memory: "20Gi"
+              cpu: "2k"
+            limits:
+              memory: "20Gi"
+              cpu: "2k"
   
